@@ -1,7 +1,7 @@
 # CommonFL
 
 CommonFL is CommonLisp wrapper around [FLTK](http://www.fltk.org)
-library. CommonFL is uisng stable FLTK 1.3.x library.
+library and is using stable FLTK 1.3.x branch.
 
 For now it support small number of FLTK features, but in the near
 future is planned full FLTK support.
