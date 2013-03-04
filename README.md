@@ -24,7 +24,8 @@ By default, CommonFL comes with built [SWIG](http://www.swig.org)
 wrapper, so you don't have to have SWIG installed.
 
 To compile and load the library, run in REPL:
-```Common Lisp
+
+```lisp
 (ql:quickload :fltk)
 ```
 
