@@ -919,18 +919,6 @@
 (cffi:defcfun ("_wrap_Fl_Widget_Tracker_exists" Fl_Widget_Tracker_exists) :int
   (self :pointer))
 
-(cffi:defcstruct Fl_Label
-	( :string)
-	( :pointer)
-	( :pointer)
-	( :int)
-	( :int)
-	( :unsigned-int)
-	( :unsigned-int)
-	( :unsigned-char)
-	(draw :pointer)
-	(measure :pointer))
-
 (defanonenum 
 	(INACTIVE #.(cl:ash 1 0))
 	(INVISIBLE #.(cl:ash 1 1))

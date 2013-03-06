@@ -4,7 +4,6 @@
 (in-package :fltk-system)
 
 ;; running things like 'make' is sooo PITA! Hello guys, we are in 2013 for a God sake...
-
 (defclass makefile (source-file)
   ())
 
@@ -24,11 +23,23 @@
 							  :defaults (component-pathname c)))))
 	  (error 'operation-error :component c :operation o))))
 
+;; a hack around SBCL defconstant mess
+#+sbcl
+(defclass source-file-hack (cl-source-file)
+  ())
+
+#+sbcl
+(defmethod perform :around (o (f source-file-hack))
+  (handler-bind
+   ((sb-ext:defconstant-uneql #'abort))
+   (call-next-method)))
+
 (defsystem :fltk
   :serial t
   :name "fltk"
   :version "0.1"
   :description "Binding for FLTK UI library"
+  #+sbcl :default-component-class source-file-hack
   :depends-on (:cffi)
   :components
   ((makefile "Makefile")
