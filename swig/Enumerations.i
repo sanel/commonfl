@@ -7,6 +7,6 @@
 #include "FL/Enumerations.H"
 %}
 
-#define FL_CAPS_LOCK	0x00020000
+//#define FL_CAPS_LOCK	0x00020000
 
 %include "FL/Enumerations.H"

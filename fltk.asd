@@ -24,6 +24,7 @@
 	  (error 'operation-error :component c :operation o))))
 
 ;; a hack around SBCL defconstant mess
+#+sbcl
 (defclass source-file-hack (cl-source-file)
   ())
 
@@ -34,14 +35,16 @@
    (call-next-method)))
 
 (defsystem :fltk
-  :serial t
+  #+sbcl :default-component-class source-file-hack
   :name "fltk"
   :version "0.1"
   :description "Binding for FLTK UI library"
-  :default-component-class source-file-hack
+  :serial t
   :depends-on (:cffi)
   :components
   ((makefile "Makefile")
+   (:file "src/package")
    (:file "src/fltk")
+   (:file "src/ffi")
    ;(:file "src/fltk-clos")
-   ))
+) )

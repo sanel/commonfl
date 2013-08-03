@@ -12,21 +12,23 @@ FLTK_HEADERS  = $(shell $(FLTK_CONFIG) --includedir)
 SRCDIR  = src
 SWIGDIR = swig
 
-all: swig fltk_wrap.so
+all: swig commonfl.so
 
-$(SRCDIR)/fltk_wrap.cxx: $(SWIGDIR)/fltk.i
-	$(SWIG) -c++ -cffi -I$(FLTK_HEADERS) -o $@ -outdir $(SRCDIR) $<
+$(SRCDIR)/commonfl.cxx: $(SWIGDIR)/fltk.i
+	$(SWIG) -c++ -noexcept -cffi -I$(FLTK_HEADERS) -o $@ -outdir $(SRCDIR) $<
 
-fltk_wrap.o: $(SRCDIR)/fltk_wrap.cxx
+commonfl.o: $(SRCDIR)/commonfl.cxx
 	$(CPP) -c -fpic $< $(FLTK_CXXFLAGS) -I$(FLTK_HEADERS)
 
-fltk_wrap.so: fltk_wrap.o
+commonfl.so: commonfl.o
 	$(LD) $(FLTK_LIBS) -shared $< -o $@
 
-swig: $(SRCDIR)/fltk_wrap.cxx
+swig: $(SRCDIR)/commonfl.cxx
 
 .PHONY: clean
 
 clean:
-	@rm -f $(SRCDIR)/*
-	@rm -f fltk_wrap.so fltk_wrap.o
+	@rm -f $(SRCDIR)/commonfl.cxx
+	@rm -f $(SRCDIR)/fltk.lisp
+	@rm -f $(SRCDIR)/fltk-clos.lisp
+	@rm -f commonfl.so commonfl.o

@@ -1,5 +1,12 @@
 %module fltk
 
+%insert("lisphead") %{
+(in-package :fltk)
+(load-foreign-library "libfltk.so")
+(load-foreign-library "libfltk_forms.so")
+%}
+
+%feature("export"); /* start exporting */
 %feature("director");
 %feature("nodirector") Fl_Valuator;
 %feature("compactdefaultargs");
@@ -17,3 +24,5 @@
 
 typedef unsigned char uchar;
 typedef unsigned int  uint;
+
+%feature("export", ""); /* stop exporting */
