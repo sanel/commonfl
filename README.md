@@ -1,7 +1,7 @@
 # CommonFL
 
 CommonFL is CommonLisp wrapper around [FLTK](http://www.fltk.org)
-library and is using stable FLTK 1.3.x branch.
+library and is targeting stable FLTK 1.3.x branch.
 
 For now it support small number of FLTK features, but in the near
 future is planned full FLTK support.
@@ -17,7 +17,7 @@ Before starting, make sure you have installed:
 * FLTK development libraries
 * gcc/g++ compiler
 * make or gmake
-* some Common Lisp compiler
+* a Common Lisp compiler
 * [quicklisp](http://www.quicklisp.org)
 
 By default, CommonFL comes with built [SWIG](http://www.swig.org)
@@ -28,8 +28,6 @@ To compile and load the library, run in REPL:
 ```lisp
 (ql:quickload :fltk)
 ```
-
-**NOTE:** examples are not yet buildable.
 
 ## License
 
