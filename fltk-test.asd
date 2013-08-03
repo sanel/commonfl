@@ -5,7 +5,5 @@
 
 (defsystem :fltk-test
   :serial t
-  :pathname #-asdf2 (merge-patnames #p"test/" *load-truename*)
-  			#+asdf2 "test/"
-  :components ((:file "sample"))
-  :depends-on (:fltk))
+  :depends-on (:fltk)
+  :components ((:file "test/sample")))
