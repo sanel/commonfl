@@ -2635,4 +2635,108 @@
 
 (cl:export 'Fl_Window_decorated_h)
 
+(cl:defconstant FL_NORMAL_BUTTON 0)
+
+(cl:export 'FL_NORMAL_BUTTON)
+
+(cl:defconstant FL_TOGGLE_BUTTON 1)
+
+(cl:export 'FL_TOGGLE_BUTTON)
+
+(cl:defconstant FL_RADIO_BUTTON (cl:+ 100 2))
+
+(cl:export 'FL_RADIO_BUTTON)
+
+(cl:defconstant FL_HIDDEN_BUTTON 3)
+
+(cl:export 'FL_HIDDEN_BUTTON)
+
+(cffi:defcfun ("_wrap_fl_old_shortcut" fl_old_shortcut) :pointer
+  (arg0 :string))
+
+(cl:export 'fl_old_shortcut)
+
+(cffi:defcfun ("_wrap_Fl_Button_handle" Fl_Button_handle) :int
+  (self :pointer)
+  (arg1 :int))
+
+(cl:export 'Fl_Button_handle)
+
+(cffi:defcfun ("_wrap_new_Fl_Button" new_Fl_Button) :pointer
+  (X :int)
+  (Y :int)
+  (W :int)
+  (H :int)
+  (L :string))
+
+(cl:export 'new_Fl_Button)
+
+(cffi:defcfun ("_wrap_Fl_Button_value__SWIG_0" Fl_Button_value) :int
+  (self :pointer)
+  (v :int))
+
+(cl:export 'Fl_Button_value)
+
+(cffi:defcfun ("_wrap_Fl_Button_value__SWIG_1" Fl_Button_value) :char
+  (self :pointer))
+
+(cl:export 'Fl_Button_value)
+
+(cffi:defcfun ("_wrap_Fl_Button_set" Fl_Button_set) :int
+  (self :pointer))
+
+(cl:export 'Fl_Button_set)
+
+(cffi:defcfun ("_wrap_Fl_Button_clear" Fl_Button_clear) :int
+  (self :pointer))
+
+(cl:export 'Fl_Button_clear)
+
+(cffi:defcfun ("_wrap_Fl_Button_setonly" Fl_Button_setonly) :void
+  (self :pointer))
+
+(cl:export 'Fl_Button_setonly)
+
+(cffi:defcfun ("_wrap_Fl_Button_shortcut__SWIG_0" Fl_Button_shortcut) :int
+  (self :pointer))
+
+(cl:export 'Fl_Button_shortcut)
+
+(cffi:defcfun ("_wrap_Fl_Button_shortcut__SWIG_1" Fl_Button_shortcut) :void
+  (self :pointer)
+  (s :int))
+
+(cl:export 'Fl_Button_shortcut)
+
+(cffi:defcfun ("_wrap_Fl_Button_down_box__SWIG_0" Fl_Button_down_box) Fl_Boxtype
+  (self :pointer))
+
+(cl:export 'Fl_Button_down_box)
+
+(cffi:defcfun ("_wrap_Fl_Button_down_box__SWIG_1" Fl_Button_down_box) :void
+  (self :pointer)
+  (b Fl_Boxtype))
+
+(cl:export 'Fl_Button_down_box)
+
+(cffi:defcfun ("_wrap_Fl_Button_shortcut__SWIG_2" Fl_Button_shortcut) :void
+  (self :pointer)
+  (s :string))
+
+(cl:export 'Fl_Button_shortcut)
+
+(cffi:defcfun ("_wrap_Fl_Button_down_color__SWIG_0" Fl_Button_down_color) :unsigned-int
+  (self :pointer))
+
+(cl:export 'Fl_Button_down_color)
+
+(cffi:defcfun ("_wrap_Fl_Button_down_color__SWIG_1" Fl_Button_down_color) :void
+  (self :pointer)
+  (c :unsigned-int))
+
+(cl:export 'Fl_Button_down_color)
+
+(cffi:defcfun ("_wrap_delete_Fl_Button" delete_Fl_Button) :void
+  (self :pointer))
+
 

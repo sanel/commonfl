@@ -5871,3 +5871,264 @@ EXPORT int _wrap_Fl_Window_decorated_h (Fl_Window *larg1) {
 }
 
 
+
+#include "FL/Fl_Button.H"
+
+EXPORT Fl_Shortcut *_wrap_fl_old_shortcut (char *larg1) {
+  Fl_Shortcut * lresult = (Fl_Shortcut *)0 ;
+  char *arg1 = (char *) 0 ;
+  Fl_Shortcut result;
+  
+  arg1 = larg1;
+  try {
+    result = fl_old_shortcut((char const *)arg1);
+    lresult = new Fl_Shortcut(result);
+    return lresult;
+  } catch (...) {
+    return (Fl_Shortcut *)0;
+  }
+}
+
+
+EXPORT int _wrap_Fl_Button_handle (Fl_Button *larg1, int larg2) {
+  int lresult = (int)0 ;
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  int arg2 ;
+  int result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    result = (int)(arg1)->handle(arg2);
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (int)0;
+  }
+}
+
+
+EXPORT Fl_Button *_wrap_new_Fl_Button (int larg1, int larg2, int larg3, int larg4, char *larg5) {
+  Fl_Button * lresult = (Fl_Button *)0 ;
+  int arg1 ;
+  int arg2 ;
+  int arg3 ;
+  int arg4 ;
+  char *arg5 = (char *) 0 ;
+  Fl_Button *result = 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  arg3 = larg3;
+  arg4 = larg4;
+  arg5 = larg5;
+  try {
+    result = (Fl_Button *)new Fl_Button(arg1,arg2,arg3,arg4,(char const *)arg5);
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Fl_Button *)0;
+  }
+}
+
+
+EXPORT int _wrap_Fl_Button_value__SWIG_0 (Fl_Button *larg1, int larg2) {
+  int lresult = (int)0 ;
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  int arg2 ;
+  int result;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    result = (int)(arg1)->value(arg2);
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (int)0;
+  }
+}
+
+
+EXPORT char _wrap_Fl_Button_value__SWIG_1 (Fl_Button *larg1) {
+  char lresult = (char)0 ;
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  char result;
+  
+  arg1 = larg1;
+  try {
+    result = (char)((Fl_Button const *)arg1)->value();
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (char)0;
+  }
+}
+
+
+EXPORT int _wrap_Fl_Button_set (Fl_Button *larg1) {
+  int lresult = (int)0 ;
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  int result;
+  
+  arg1 = larg1;
+  try {
+    result = (int)(arg1)->set();
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (int)0;
+  }
+}
+
+
+EXPORT int _wrap_Fl_Button_clear (Fl_Button *larg1) {
+  int lresult = (int)0 ;
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  int result;
+  
+  arg1 = larg1;
+  try {
+    result = (int)(arg1)->clear();
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (int)0;
+  }
+}
+
+
+EXPORT void _wrap_Fl_Button_setonly (Fl_Button *larg1) {
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    (arg1)->setonly();
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT int _wrap_Fl_Button_shortcut__SWIG_0 (Fl_Button *larg1) {
+  int lresult = (int)0 ;
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  int result;
+  
+  arg1 = larg1;
+  try {
+    result = (int)((Fl_Button const *)arg1)->shortcut();
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (int)0;
+  }
+}
+
+
+EXPORT void _wrap_Fl_Button_shortcut__SWIG_1 (Fl_Button *larg1, int larg2) {
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  int arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    (arg1)->shortcut(arg2);
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Fl_Boxtype _wrap_Fl_Button_down_box__SWIG_0 (Fl_Button *larg1) {
+  Fl_Boxtype lresult = (Fl_Boxtype)0 ;
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  Fl_Boxtype result;
+  
+  arg1 = larg1;
+  try {
+    result = (Fl_Boxtype)((Fl_Button const *)arg1)->down_box();
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Fl_Boxtype)0;
+  }
+}
+
+
+EXPORT void _wrap_Fl_Button_down_box__SWIG_1 (Fl_Button *larg1, Fl_Boxtype larg2) {
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  Fl_Boxtype arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    (arg1)->down_box(arg2);
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_Fl_Button_shortcut__SWIG_2 (Fl_Button *larg1, char *larg2) {
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    (arg1)->shortcut((char const *)arg2);
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT Fl_Color _wrap_Fl_Button_down_color__SWIG_0 (Fl_Button *larg1) {
+  Fl_Color lresult = (Fl_Color)0 ;
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  Fl_Color result;
+  
+  arg1 = larg1;
+  try {
+    result = (Fl_Color)((Fl_Button const *)arg1)->down_color();
+    lresult = result;
+    return lresult;
+  } catch (...) {
+    return (Fl_Color)0;
+  }
+}
+
+
+EXPORT void _wrap_Fl_Button_down_color__SWIG_1 (Fl_Button *larg1, unsigned int larg2) {
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  unsigned int arg2 ;
+  
+  arg1 = larg1;
+  arg2 = larg2;
+  try {
+    (arg1)->down_color(arg2);
+    
+  } catch (...) {
+    
+  }
+}
+
+
+EXPORT void _wrap_delete_Fl_Button (Fl_Button *larg1) {
+  Fl_Button *arg1 = (Fl_Button *) 0 ;
+  
+  arg1 = larg1;
+  try {
+    delete arg1;
+    
+  } catch (...) {
+    
+  }
+}
+
+

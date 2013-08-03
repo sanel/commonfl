@@ -568,3 +568,49 @@
 (cl:defmethod decorated-h ((self fl-window))
   (Fl_Window_decorated_h (ff-pointer self)))
 
+
+(cl:defclass fl-button(Fl_Widget)
+  ((ff-pointer :reader ff-pointer)))
+
+(cl:defmethod handle ((self fl-button) (arg1 cl:integer))
+  (Fl_Button_handle (ff-pointer self) arg1))
+
+(cl:defmethod initialize-instance :after ((obj fl-button) &key (X cl:integer) (Y cl:integer) (W cl:integer) (H cl:integer) (L cl:string))
+  (setf (slot-value obj 'ff-pointer) (new_Fl_Button X Y W H L)))
+
+(cl:defmethod value ((self fl-button) (v cl:integer))
+  (Fl_Button_value (ff-pointer self) v))
+
+(cl:defmethod value ((self fl-button))
+  (Fl_Button_value (ff-pointer self)))
+
+(cl:defmethod set ((self fl-button))
+  (Fl_Button_set (ff-pointer self)))
+
+(cl:defmethod clear ((self fl-button))
+  (Fl_Button_clear (ff-pointer self)))
+
+(cl:defmethod setonly ((self fl-button))
+  (Fl_Button_setonly (ff-pointer self)))
+
+(cl:defmethod shortcut ((self fl-button))
+  (Fl_Button_shortcut (ff-pointer self)))
+
+(cl:defmethod shortcut ((self fl-button) (s cl:integer))
+  (Fl_Button_shortcut (ff-pointer self) s))
+
+(cl:defmethod down-box ((self fl-button))
+  (Fl_Button_down_box (ff-pointer self)))
+
+(cl:defmethod down-box ((self fl-button) (b cl:integer))
+  (Fl_Button_down_box (ff-pointer self) b))
+
+(cl:defmethod shortcut ((self fl-button) (s cl:string))
+  (Fl_Button_shortcut (ff-pointer self) s))
+
+(cl:defmethod down-color ((self fl-button))
+  (Fl_Button_down_color (ff-pointer self)))
+
+(cl:defmethod down-color ((self fl-button) (c cl:integer))
+  (Fl_Button_down_color (ff-pointer self) c))
+

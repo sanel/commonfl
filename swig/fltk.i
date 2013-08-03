@@ -21,6 +21,7 @@
 %include Fl_Widget.i
 %include Fl_Group.i
 %include Fl_Window.i
+%include Fl_Button.i
 
 typedef unsigned char uchar;
 typedef unsigned int  uint;
